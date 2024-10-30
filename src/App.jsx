@@ -10,10 +10,17 @@ function App() {
     setTodos(newTodoList);
   }
 
+  function handleDeleteTodo(index) {
+    const newTodoList = todos.filter((todo, todoIndex) => {
+      return todoIndex !== todo;
+    });
+    setTodos(newTodoList);
+  }
+
   return (
     <>
       <TodoInput handleAddTodos={handleAddTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} handleDeleteTodo={handleDeleteTodo} />
     </>
   );
 }
