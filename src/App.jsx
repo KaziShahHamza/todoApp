@@ -18,6 +18,8 @@ function App() {
     setTodos(newTodoList);
   }
 
+  // added new line
+
   function handleEditTodo(index) {
     const valueToBeEdited = todos[index];
     setTodoValue(valueToBeEdited);
